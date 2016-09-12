@@ -1,0 +1,246 @@
+@import 'https://fonts.googleapis.com/css?family=Playfair+Display:900|Raleway:200,400';
+
+
+
+// Fonts
+
+$playfair: 'Playfair Display', serif;
+$raleway: 'Raleway', sans-serif;
+
+// Colors
+
+$white: rgb(250,250,250);
+$black: rgb(50,50,50);
+$blue: #8094FF;
+
+#mini {
+  width:20%;
+  border: 1px solid $black;
+}
+// Padding
+
+.ptb {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.ptb30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+.ptb60 {
+  margin: 40px 0;
+}
+// shadows
+
+.text-shadow {
+  text-shadow: 2px 2px 2px $black;
+}
+
+
+// titles
+
+h1 {
+  font-family: $playfair;
+  color: $black;
+  span {
+    font-weight: lighter;
+  }
+}
+
+h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  span {
+    font-weight: lighter;
+  }
+}
+
+h1 {
+  letter-spacing: 12px;
+  font-weight: bold;
+}
+
+h2 {
+  letter-spacing: 5px;
+}
+
+h3 {
+  color: $white;
+}
+
+h4 {
+  letter-spacing:3px;
+}
+
+a {
+  color: $black;
+}
+
+mark {
+  background-color: $blue;
+}
+
+body {
+  background-color: $white;
+  color: $black;
+}
+// Navigation
+.main-nav {
+  z-index:10;
+  font-size: 12px;
+  width:100vh;
+  height:45px;
+  position:fixed;
+  -webkit-transform-origin: left top;
+  -webkit-transform:rotate(-90deg) translateX(-100%);
+}
+ul.nav li {
+  margin-right:20px;
+  float:right;
+  height:100%;
+  line-height:45px;
+}
+
+
+// Parallax
+
+.parallax-window {
+    min-height: 500px;
+    background: transparent;
+}
+
+.parallax-window2 {
+    min-height: 200px;
+    background: transparent;
+}
+
+// Sections
+
+.header {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e2beb7+0,9b90b2+30,7db9e8+65,a9d1b8+100 */
+background: #e2beb7; /* Old browsers */
+background: -moz-linear-gradient(left,  #e2beb7 0%, #9b90b2 30%, #7db9e8 65%, #a9d1b8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #e2beb7 0%,#9b90b2 30%,#7db9e8 65%,#a9d1b8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #e2beb7 0%,#9b90b2 30%,#7db9e8 65%,#a9d1b8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2beb7', endColorstr='#a9d1b8',GradientType=1 ); /* IE6-9 */
+
+  background-size: cover;
+  height:100vh;
+  width:100%;
+  display: flex;
+  header {
+    margin: auto;
+  }
+}
+.fa-angle-down {
+  visibility: hidden;
+}
+
+
+// content
+
+  // Presentation
+
+.forward {
+  position: absolute;
+  top:40%;
+  left: -60%;
+  font-weight: bold;
+  letter-spacing: 4px;
+  h2 {
+    color: rgb(160,160,160);
+  }
+}
+
+#creative_logo {
+  height:80px;
+  width:auto;
+}
+
+.big-text {
+  font-size: 26px;
+}
+
+.lead {
+  font-weight: 200;
+  text-align: left;
+}
+
+
+  // Skills
+
+#skills {
+  i {
+    font-size:80px;
+  }
+}
+
+
+  // Projet
+
+.project {
+  height:350px;
+  padding: 0 0;
+  color: $white;
+  a {
+    color: $white;
+  }
+}
+
+.flex {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.questions-project {
+  margin: auto;
+}
+
+.content {
+  padding: 10px 15px 15px;
+  position: absolute;
+  bottom: 0px;
+  left:0px;
+}
+
+.latest {
+  background: url(https://images.unsplash.com/reserve/AXx3QORhRDKAMrbb8pX4_photo%202.JPG?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=248f57b09c4fa1f9955e4eacdbb21e6e);
+  background-size: cover;
+  background-position:center center;
+}
+
+.jd {
+  background: url(https://hd.unsplash.com/photo-1470290449668-02dd93d9420a);
+  background-size: cover;
+  background-position:center center;
+}
+
+.ju {
+  background: url(https://hd.unsplash.com/photo-1452509480110-e8de12b41396);
+  background-size: cover;
+  background-position:center center;
+}
+
+
+// Project page
+
+.header-half {
+  height: 50vh;
+  z-index:1;
+
+}
+
+.decal {
+  background-color: white;
+  z-index:2;
+  position: relative;
+  top: -60px;
+  padding: 5px 30px 5px 30px;
+}
+
+.project-link {
+  letter-spacing: 3px;
+}
