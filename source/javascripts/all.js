@@ -7,14 +7,17 @@
 //= require SplitText.min
 //= require parallax.min
 
+function random(min, max){
+  return (Math.random() * (max - min)) + min;
+}
 
 $(document).ready(function() {
   var ico = $(".fa-angle-down");
   var nav = $(".main-nav");
   var tl = new TimelineMax();
-  tl.from(".yourpath", 2, {autoAlpha:0, y:120, x:90})
-  .staggerFrom(".draw-me", 2, {drawSVG:0}, 0.1)
-  .to(ico, 1, {y:20, autoAlpha:1})
+  tl.staggerFrom(".drawme", 2, {drawSVG:0}, 0.1)
+  .from(".black", 3, {autoAlpha:0, scale: .1, yoyo: true})
+  .to(ico, 0.5, {y:20, autoAlpha:1, repeat:1})
   .from(nav, 1, {x:-200});
 });
 
@@ -29,9 +32,7 @@ var text = $(".split");
 
 var split = new SplitText(text);
 
-function random(min, max){
-  return (Math.random() * (max - min)) + min;
-}
+
 
 $(split.chars).each(function(i){
   TweenMax.from($(this), 2.5, {
