@@ -4,7 +4,9 @@
 //= require SplitText.min
 //= require DrawSVGPlugin.min
 //= require ScrollToPlugin.min
+//= require MorphSVGPlugin.min
 //= require parallax.min
+
 
 
 
@@ -14,17 +16,22 @@ function random(min, max){
 }
 
 $(document).ready(function() {
-  var nav = $(".main-nav");
-  var header = $(".loader");
-  var headercont = $("#loader");
-  var presentation = $("#presentation")
-  var tl = new TimelineMax();
+
+
+
+  var nav = $(".main-nav"),
+      header = $(".loader"),
+      headercont = $("#loader"),
+      presentation = $("#presentation"),
+      tl = new TimelineMax();
+
   tl.staggerFrom(".drawme", 2, {drawSVG:0}, 0.1)
     .from(".black", 1, {autoAlpha:0, scale: .1, yoyo: true})
-    .to(header, 3, { y:-1500, ease: Power2.easeOut}, "+=0.5")
+    .to(header, 4, { y:-1500, ease: Power2.easeOut}, "+=0.5")
     .to(headercont, 1, {scale: 0.5}, "-=3")
-    .from(nav, 1, {x:-200}, "-=2")
-    .from(presentation, 2, {scale: 0}, "-=2")
+    .from(nav, 1, {x:-200}, "-=1")
+    .from(presentation, 1, {autoAlpha:0, scale: 1.1}, "-=2");
+
 
 
 
@@ -42,12 +49,22 @@ $(document).ready(function() {
     $(".background-move").css({"background-position": traX + "%" + traY + "%"});
   });
 
+
+
+  var right = $(".right")
+      left = $(".left")
+      center = $(".center");
+  var tlog = new TimelineMax({repeat:-1, repeatDelay: 0.5});
+  tlog.from(left, 0.2, {autoAlpha:0, scale:1.5, ease: Circ.easeOut})
+    .from(center, 0.2, {autoAlpha:0, scale:1.5, ease: Circ.easeOut})
+    .from(right, 0.2, {autoAlpha:0, scale:1.5, ease: Circ.easeOut})
+    .to(left, 0.2, {autoAlpha:0, scale: 1.5, ease: Circ.easeOut})
+    .to(center, 0.2, {autoAlpha:0, scale: 1.5, ease: Circ.easeOut})
+    .to(right, 0.2, {autoAlpha:0, scale: 1.5, ease: Circ.easeOut});
+
   $(".gopro").click(function(){
-  TweenMax.to(window, 1,{scrollTo: "#projects"})
-})
-
-
-
+    TweenMax.to(window, 1, {scrollTo: "#projects"})
+  });
 });
 
 
